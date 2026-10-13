@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Thanh toán — Aurelle</title>
+  <meta name="description" content="Aurelle — trang sức cao cấp, chế tác tận tâm. Nhẫn, dây chuyền, bông tai và vòng tay được làm ra để đồng hành cùng bạn trọn đời.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23201c19'/%3E%3Cpath d='M16 7l7 9-7 9-7-9z' fill='%23c9a66b'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Be+Vietnam+Pro:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+  <script>window.InsiderQueue = window.InsiderQueue || [];</script>
+  <script async src="https://indemo.api.useinsider.com/ins.js?id=10005413"></script>
+</head>
+<body data-page="checkout">
+  <header id="site-header"></header>
+  <main>
+    <section class="container section tight">
+      <h1 class="page-title">Thanh toán</h1>
+      <div class="split">
+        <form id="checkout-form" class="form">
+          <h2>Thông tin liên hệ</h2>
+          <div class="fields">
+            <label>Họ và tên<input name="name" autocomplete="name" maxlength="80" required></label>
+            <label>Email<input name="email" type="email" autocomplete="email" maxlength="200" required></label>
+          </div>
+
+          <h2>Địa chỉ giao hàng</h2>
+          <div class="fields">
+            <label class="wide">Địa chỉ<input name="address" autocomplete="street-address" maxlength="200" required></label>
+            <label>Tỉnh / Thành phố<input name="city" autocomplete="address-level2" maxlength="80" required></label>
+            <label>Mã bưu chính<input name="postalCode" autocomplete="postal-code" maxlength="20" required></label>
+            <label class="wide">Quốc gia<input name="country" autocomplete="country-name" maxlength="80" required></label>
+          </div>
+
+          <h2>Thanh toán</h2>
+          <p class="notice">Đây là cửa hàng demo — không có khoản thanh toán nào được thực hiện. Vui lòng không nhập thông tin thẻ thật; hãy dùng 4242 4242 4242 4242.</p>
+          <div class="fields">
+            <label class="wide">Số thẻ<input name="card" inputmode="numeric" placeholder="4242 4242 4242 4242" autocomplete="off" required></label>
+            <label>Ngày hết hạn<input name="expiry" placeholder="MM / YY" autocomplete="off" required></label>
+            <label>CVC<input name="cvc" inputmode="numeric" placeholder="123" autocomplete="off" required></label>
+          </div>
+
+          <p class="form-error" role="alert" hidden></p>
+          <button class="btn block" type="submit">Đặt hàng</button>
+        </form>
+        <aside class="summary" id="checkout-summary"></aside>
+      </div>
+    </section>
+  </main>
+  <footer id="site-footer"></footer>
+  <script src="/js/art.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
