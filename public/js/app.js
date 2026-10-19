@@ -327,8 +327,8 @@
       trackPage('home', {});
       const products = await getProducts();
       $$('[data-art-category]').forEach((el) => {
-        const product = products.find((p) => p.category === el.dataset.artCategory);
-        if (product) el.innerHTML = productArt(product);
+        const category = el.dataset.artCategory;
+        el.innerHTML = `<img src="/img/categories/${esc(category)}.png" alt="${esc(label(category))}">`;
       });
       $('#featured-grid').innerHTML = products
         .filter((p) => p.featured)
