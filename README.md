@@ -1,4 +1,4 @@
-# Aurelle — demo jewelry store
+# PNJ — demo jewelry store
 
 A small storefront: static pages in `public/`, an Express API in `lib/`, sample products in `lib/products.js`.
 

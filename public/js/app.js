@@ -261,7 +261,7 @@
       <div class="announce">Miễn phí vận chuyển có bảo hiểm cho đơn hàng trên ${money(FREE_SHIPPING_MIN)}</div>
       <div class="nav container">
         <button class="nav-toggle" type="button" aria-label="Mở hoặc đóng menu"><span></span><span></span></button>
-        <a class="logo" href="/">Aurelle</a>
+        <a class="logo" href="/" aria-label="PNJ — Trang chủ"><img src="/img/brand/pnj-logo.png" alt="PNJ" width="114" height="46"></a>
         <nav class="nav-links" aria-label="Chính">
           <a href="/collection">Tất cả sản phẩm</a>
           ${categoryLinks}
@@ -275,8 +275,8 @@
     $('#site-footer').innerHTML = `
       <div class="container footer-grid">
         <div>
-          <a class="logo" href="/">Aurelle</a>
-          <p>Trang sức cao cấp, chế tác tận tâm. Thiết kế theo từng lô nhỏ và làm ra để đồng hành cùng bạn trọn đời.</p>
+          <a class="logo" href="/" aria-label="PNJ — Trang chủ"><img src="/img/brand/pnj-logo-white.png" alt="PNJ" width="129" height="52"></a>
+          <p>PNJ — Niềm tin và Phong cách. Trang sức vàng, bạc, kim cương và đá quý được chế tác tinh xảo để đồng hành cùng bạn trọn đời.</p>
         </div>
         <div>
           <h4>Mua sắm</h4>
@@ -294,7 +294,7 @@
           <p>Đá quý có nguồn gốc trách nhiệm<br>Kim loại quý tái chế<br>Đổi trả trong 30 ngày</p>
         </div>
       </div>
-      <div class="container footer-base">© ${new Date().getFullYear()} Aurelle. Cửa hàng demo — không có đơn hàng thật nào được xử lý.</div>`;
+      <div class="container footer-base">© ${new Date().getFullYear()} PNJ. Cửa hàng demo — không có đơn hàng thật nào được xử lý.</div>`;
 
     $('.nav-toggle').addEventListener('click', () => $('#site-header').classList.toggle('open'));
     updateCartCount();
@@ -351,7 +351,7 @@
           trackPage('category', { breadcrumb: [category ? label(category) : 'Tất cả sản phẩm'] });
         }
         $('#collection-title').textContent = category ? label(category) : 'Bộ sưu tập';
-        document.title = `${category ? label(category) : 'Tất cả sản phẩm'} — Aurelle`;
+        document.title = `${category ? label(category) : 'Tất cả sản phẩm'} | PNJ`;
         chips.innerHTML = ['', ...CATEGORIES]
           .map(
             (c) =>
@@ -390,9 +390,9 @@
         trackPage('other', { name: 'Product not found' });
         return;
       }
-      trackPage('product', { ...insiderProduct(p), description: p.description, brand: 'Aurelle' });
+      trackPage('product', { ...insiderProduct(p), description: p.description, brand: 'PNJ' });
 
-      document.title = `${p.name} — Aurelle`;
+      document.title = `${p.name} | PNJ`;
       root.innerHTML = `
         <nav class="crumbs">
           <a href="/">Trang chủ</a> / <a href="/collection?category=${p.category}">${label(p.category)}</a> / <span>${esc(p.name)}</span>

@@ -10,4 +10,4 @@ app.use(express.static(publicDir, { extensions: ['html'] }));
 app.use((req, res) => res.status(404).sendFile(path.join(publicDir, '404.html')));
 
 const port = process.env.PORT || 3010;
-app.listen(port, () => console.log(`Aurelle running at http://localhost:${port}`));
+app.listen(port, () => console.log(`PNJ demo running at http://localhost:${port}`));

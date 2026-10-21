@@ -1,8 +1,8 @@
 {
-  "name": "aurelle-jewelry",
+  "name": "pnj-jewelry-demo",
   "version": "1.0.0",
   "private": true,
-  "description": "Aurelle — a demo fine jewelry storefront (Express API + static frontend)",
+  "description": "PNJ — a demo fine jewelry storefront (Express API + static frontend)",
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js"
